@@ -1,4 +1,4 @@
-Regex_Pattern = r'\w*s$'	# Do not delete 'r'.
+Regex_Pattern = r'^[a-zA-Z]*s$'	# Do not delete 'r'.
 
 import re
 

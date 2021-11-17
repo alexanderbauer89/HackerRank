@@ -1,1 +1,2 @@
-SELECT DISTINCT CITY FROM STATION WHERE LEFT(CITY, 1) IN('a', 'e', 'i', 'o', 'u') AND RIGHT(CITY, 1) IN('a', 'e', 'i', 'o', 'u');
+SET @vowels = "a,e,i,o,u";
+SELECT DISTINCT CITY FROM STATION WHERE FIND_IN_SET(LEFT(CITY, 1), @vowels) AND FIND_IN_SET(RIGHT(CITY, 1), @vowels);

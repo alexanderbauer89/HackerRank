@@ -1,0 +1,2 @@
+SET @vowels = "a,e,i,o,u";
+SELECT DISTINCT CITY FROM STATION WHERE !FIND_IN_SET(LEFT(CITY, 1), @vowels) OR  !FIND_IN_SET(RIGHT(CITY, 1), @vowels);

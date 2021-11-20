@@ -1,7 +1,5 @@
 def symmetric_difference(a, b):
-    x = a.difference(b)
-    y = b.difference(a)
-    return sorted(x.union(y), key=int)
+    return sorted(set(a ^ b), key=int)
 
 if __name__ == '__main__':
     _,a = input(), set(raw_input().split())
